@@ -1,6 +1,8 @@
 package Dec2020
 
-func SwapPairs(head *ListNode) *ListNode {
+import "main.go/types"
+
+func SwapPairs(head *types.ListNode) *types.ListNode {
 	prev := head
 	for ptr := head; ptr != nil && ptr.Next != nil; {
 		if prev != head {

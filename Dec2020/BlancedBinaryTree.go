@@ -1,8 +1,12 @@
 package Dec2020
 
-import "log"
+import (
+	"log"
 
-func IsBalanced(root *TreeNode) bool {
+	"main.go/types"
+)
+
+func IsBalanced(root *types.TreeNode) bool {
 	defer func() {
 		if s := recover(); s != nil {
 			log.Println(s)
@@ -30,7 +34,7 @@ func IsBalanced(root *TreeNode) bool {
 	return true
 }
 
-func dfsSearchHeight(ptr *TreeNode, height int, max *int) {
+func dfsSearchHeight(ptr *types.TreeNode, height int, max *int) {
 	defer func() {
 		if s := recover(); s != nil {
 			log.Println(s)

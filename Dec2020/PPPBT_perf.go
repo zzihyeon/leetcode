@@ -1,20 +1,22 @@
 package Dec2020
 
+import "main.go/types"
+
 /**
  * Definition for a binary tree node.
- * type TreeNode struct {
+ * type types.TreeNode struct {
  *     Val int
- *     Left *TreeNode
- *     Right *TreeNode
+ *     Left *types.TreeNode
+ *     Right *types.TreeNode
  * }
  */ //
-func PseudoPalindromicPathsPerf(root *TreeNode) int {
+func PseudoPalindromicPathsPerf(root *types.TreeNode) int {
 	cnt := 0
 	makePermutationPerf(root, []int{}, &cnt)
 	return cnt
 }
 
-func makePermutationPerf(ptr *TreeNode, permuArray []int, cnt *int) {
+func makePermutationPerf(ptr *types.TreeNode, permuArray []int, cnt *int) {
 	if ptr == nil {
 		return
 	}

@@ -1,18 +1,20 @@
 package Dec2020
 
-func MakeNodeData(root *TreeNode, val []int) {
-	queue := []*TreeNode{}
+import "main.go/types"
+
+func MakeNodeData(root *types.TreeNode, val []int) {
+	queue := []*types.TreeNode{}
 	queueCnt := 0
 	for i, ele := range val {
 		if i == 0 {
 			root.Val = ele
 			queue = append(queue, root)
 		} else {
-			var newNode *TreeNode
+			var newNode *types.TreeNode
 			if ele == 0 {
 				newNode = nil
 			} else {
-				newNode = &TreeNode{Val: ele}
+				newNode = &types.TreeNode{Val: ele}
 				queue = append(queue, newNode)
 			}
 			if queueCnt == 2 {
@@ -32,10 +34,10 @@ func MakeNodeData(root *TreeNode, val []int) {
 	}
 }
 
-func MakeListNodeData(root *ListNode, val []int) {
-	ptr := &ListNode{}
+func MakeListNodeData(root *types.ListNode, val []int) {
+	ptr := &types.ListNode{}
 	for i, ele := range val {
-		newNode := &ListNode{}
+		newNode := &types.ListNode{}
 		newNode.Val = ele
 		if i == 0 {
 			root.Val = ele

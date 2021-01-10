@@ -1,4 +1,4 @@
-package Dec2020
+package types
 
 type TreeNode struct {
 	Val   int
